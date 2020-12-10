@@ -16,11 +16,6 @@ String.space = function(a) {
 };
 
 function format(a) {
-	if (!check(a)) {
-		alert('JSON error');
-		return;
-	}
-	
 	for (var b = a.replace(/\n/g, " ").replace(/\r/g, " "), e = [], c = 0, d = !1, f = 0, i = b.length; f < i; f++) {
 		var g = b.charAt(f);
 		if (d && g === d) b.charAt(f -
@@ -37,11 +32,6 @@ function format(a) {
 }
 
 function removeWhiteSpace(a) {
-	if (!check(a)) {
-		alert('JSON error');
-		return;
-	}
-	
 	for (var b = a.replace(/\n/g, " ").replace(/\r/g, " "), e = [], c = !1, d = 0, f = b.length; d < f; d++) {
 		var i = b.charAt(d);
 		if (c && i === c) b.charAt(d - 1) !== "\\" && (c = !1);
@@ -56,7 +46,6 @@ function convertFormat() {
 	var a = document.querySelector("#input").value;
 	var value = format(a);
 	
-	document.querySelector("#input").focus();
 	if (value) {
 		document.querySelector("#input").value = value;
 	}
@@ -67,9 +56,12 @@ function convertRemoveSpace() {
 	var a = document.querySelector("#input").value;
 	var value = removeWhiteSpace(a);
 	
-	document.querySelector("#input").focus();
 	if (value) {
 		document.querySelector("#input").value = value;
 	}
+}
+
+function convertClear() {
+	document.querySelector("#input").value = '';
 }
 
