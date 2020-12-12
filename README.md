@@ -1,3 +1,3 @@
-# jsonformatter.codethoi.com
+# JSON Formatter - Beautifier
 
-JSON Formatter - Beautifier
+[JSON Formatter - Beautifier](https://jsonformatter.codethoi.com)
